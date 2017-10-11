@@ -1,0 +1,28 @@
+{
+  "name": "requestheaderparser",
+  "version": "1.0.0",
+  "description": "Request Header Parser for fcc backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemcrimmins/requestHeaderParser.git"
+  },
+  "keywords": [
+    "parser",
+    "header",
+    "microservice",
+    "request"
+  ],
+  "author": "Kem Crimmins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kemcrimmins/requestHeaderParser/issues"
+  },
+  "homepage": "https://github.com/kemcrimmins/requestHeaderParser#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
