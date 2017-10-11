@@ -1,2 +1,2 @@
 # requestHeaderParser
-Request Header Parser Microservice project for freeCodeCamp backend curriculum
+User Story: I can get the IP address, language and operating system for my browser
