@@ -1,15 +1,14 @@
 var express = require('express');
 var app = express();
 
+app.enable('trust proxy');
+
 app.use(/*default*/ (req, res) => {
 	var ipAddress = req.ip;
-	console.log(ipAddress);
-	var language = req.get('accept-language');
-	console.log(language);
-	var userAgent = req.get('user-agent');
-	console.log(userAgent);
+	var language = /(?:(?!,).)*/.exec(req.get('accept-language'))[0]; // extract substring prior to first comma
+	var software = /\(([^)]+)\)/.exec(req.get('user-agent'))[1]; // extract between first parentheses
 
-	res.send('hello');
+	res.send({ipaddress: ipAddress, language: language, software: software});
 });
 
 app.listen(3000, ()=> {
